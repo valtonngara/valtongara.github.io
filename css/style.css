@@ -197,7 +197,7 @@ z-index
 {
     display: inline-block;
     background-color: var(--main-color);
-    color: var(--light-one);
+    color: var(--light-two);
     border-radius: 2rem;
     font-size: 1.05rem;
     font-weight: 500;
@@ -209,7 +209,7 @@ z-index
 
 .btn:hover
 {
-    color: var(--light-three);
+    color: var(--light-two);
     background-color: var(--light-one);
 
 }
@@ -265,7 +265,7 @@ nav .container
 .links a.active 
 {
     background-color: var(--main-color);
-    color: var(--light-one);
+    color: var(--light-two);
     border-radius: 2rem;
     font-size: 1rem;
     padding: 0.9rem 2.1rem;
@@ -1183,7 +1183,7 @@ a{
     }
   }
   
-  @media (max-width: 560px) {
+  @media (max-width: 480px) {
     .container {
       padding: 0 2rem;
     }
