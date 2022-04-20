@@ -75,6 +75,14 @@ z-index
     justify-content: center;
 }
 
+.grid-1
+{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+}
+
 .text
 {
     font-size: 1.25rem;
@@ -225,6 +233,63 @@ header
     background-color: var(--light-three);
     overflow: hidden;
     position: relative;
+}
+
+.hamburger-menu {
+  width: 2.7rem;
+  height: 3rem;
+  z-index: 100;
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hamburger-menu .bar {
+  position: relative;
+  width: 2.1rem;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--dark-one);
+  transition: 0.5s;
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  position: absolute;
+  width: 2.1rem;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--dark-one);
+  transition: 0.5s;
+}
+
+.bar:before {
+  transform: translateY(-9px);
+}
+
+.bar:after {
+  transform: translateY(9px);
+}
+
+nav.open .hamburger-menu .bar {
+  background-color: transparent;
+  transform: rotate(360deg);
+}
+
+nav.open .hamburger-menu .bar:before {
+  transform: translateY(0) rotate(45deg);
+  background-color: var(--light-one);
+}
+
+nav.open .hamburger-menu .bar:after {
+  transform: translateY(0) rotate(-45deg);
+  background-color: var(--light-one);
+}
+
+nav.open .links {
+  transform: translateX(0);
 }
 
 nav
@@ -450,7 +515,7 @@ nav .container
 
 /* PORTFOLIO */
 
-.portfolio
+.projects
 {
     position: relative;
     background-color: var(--light-two);
@@ -466,12 +531,12 @@ nav .container
     background-color: var(--main-color);
 }
 
-.portfolio .title, .portfolio .title:before
+.projects .title, .projects .title:before
 {
     color: var(--light-one);
 }
 
-.portfolio .title:after
+.projects .title:after
 {
     background-color: var(--light-one);
 }
@@ -984,6 +1049,26 @@ a{
     animation: scale 1.2s ease-out infinite 1s;
 }
 
+.bottom-footer {
+  margin-top: 5.5rem;
+  padding: 0 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright .text {
+  color: #7b7b7b;
+  font-size: 1.2rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.copyright .text span {
+  color: var(--main-color);
+  cursor: pointer;
+}
+
 @keyframes scale
 {
     0% {
@@ -1259,23 +1344,21 @@ a{
       margin-bottom: 0.5rem;
     }
   
-    .input-arrow {
-      font-size: 1.2rem;
-    }
-  
     .back-btn-wrap {
-      margin-left: 1.3rem;
+      margin-left: 1.5rem;
     }
   
     .back-btn {
       width: 43px;
       height: 43px;
       font-size: 0.9rem;
+      margin-left: 2.8rem;
     }
   
     .back-btn-wrap:before {
-      width: 45px;
-      height: 45px;
+      width: 43px;
+      height: 43px;
+      margin-left: 1.5rem;
     }
   }
   

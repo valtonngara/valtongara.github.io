@@ -31,6 +31,22 @@ window.addEventListener("scroll", () => {
   countUp();
 })
 
+function closeMenu() {
+  navbar.classList.remove("open");
+  document.body.classList.remove("stop-scrolling");
+}
+
+hamburger_menu.addEventListener("click", () => {
+  if (!navbar.classList.contains("open")) {
+    navbar.classList.add("open");
+    document.body.classList.add("stop-scrolling");
+  } else {
+    closeMenu();
+  }
+});
+
+links.forEach((link) => link.addEventListener("click", () => closeMenu()));
+
 
 function checkScroll(el) {
     let rect = el.getBoundingClientRect();
@@ -55,7 +71,7 @@ function countUp() {
 
         if (currentNum < maxNum) {
           numb.innerText = currentNum + increment;
-          setTimeout(updateCount, 1);
+          setTimeout(updateCount, 3);
         } else {
           numb.innerText = maxNum;
         }
@@ -73,19 +89,3 @@ footer_input.addEventListener("blur", () => {
   if (footer_input.value != "") return;
   footer_input.classList.remove("focus");
 });
-
-function closeMenu() {
-  navbar.classList.remove("open");
-  document.body.classList.remove("stop-scrolling");
-}
-
-hamburger_menu.addEventListener("click", () => {
-  if (!navbar.classList.contains("open")) {
-    navbar.classList.add("open");
-    document.body.classList.add("stop-scrolling");
-  } else {
-    closeMenu();
-  }
-});
-
-links.forEach((link) => link.addEventListener("click", () => closeMenu()));
