@@ -635,7 +635,33 @@ nav .container
     margin: auto 0;
 }
 
+.img-overlay .plusweb
+{
+    position: relative;
+    margin: auto 0;
+}
+
+
 .plus:before, .plus:after 
+{
+    content: '';
+    position:absolute;
+    width: 4.5rem;
+    height: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgreen;
+    border-radius: 3px;
+}
+
+.img-overlay .plusweb
+{
+    position: relative;
+    margin: auto 0;
+}
+
+.plusweb:before, .plusweb:after 
 {
     content: '';
     position:absolute;
@@ -649,6 +675,21 @@ nav .container
 }
 
 .plus:before
+{
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.plus:before
+{
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.plusweb:before
+{
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.plusweb:before
 {
     transform: translate(-50%, -50%) rotate(-90deg);
 }
