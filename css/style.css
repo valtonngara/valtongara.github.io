@@ -1266,6 +1266,11 @@ a{
     .plus:after {
       width: 2.8rem;
     }
+
+    .plusweb:before,
+    .plusweb:after {
+      width: 2.8rem;
+    }
   
     .img-overlay h3 {
       font-size: 1.1rem;
